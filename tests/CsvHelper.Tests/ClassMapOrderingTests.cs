@@ -45,8 +45,9 @@ namespace CsvHelper.Tests
 				csv.WriteRecords(list);
 				writer.Flush();
 				stream.Position = 0;
-
 				Assert.AreEqual("First,Second,Third", reader.ReadLine());
+
+				Assert.AreEqual("1,2,3", reader.ReadLine());
 			}
 		}
 
